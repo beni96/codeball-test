@@ -32,5 +32,8 @@ export class AddCommentComponent implements OnInit {
   onSubmit() {
     this.commentAdded.emit({ name: this.formControls.name.value, comment: this.formControls.comment.value });
     this.form.reset();
+    conat a = 'aaaa'
+    console.log('aaaa')
+    /* bla bla */
   }
 }
