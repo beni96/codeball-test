@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <span class="title">User Reviews</span>
+  <app-comment
+    *ngFor="let comment of comments; let index=index"
+    [avatarUrl]="comment.avatarUrl"
+    [name]="comment.name"
+    [comment]="comment.comment"
+    (commentInEdit)="onCommentInEdit()"
+    (commentEdited)="onEdit(index, $event)"
+    (commentDeleted)="onDelete(index)"
+  ></app-comment>
+  <app-add-comment *ngIf="!isCommentInEdit" (commentAdded)="onCommentAdd($event)"></app-add-comment>
+</div>
