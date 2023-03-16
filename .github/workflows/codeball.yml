@@ -1,4 +1,4 @@
-name: Codeball1
+name: Codeball
 on:
   pull_request: {}
   pull_request_review_comment:
@@ -7,7 +7,7 @@ on:
 jobs:
   codeball_job:
     runs-on: ubuntu-latest
-    name: Codeball1
+    name: Codeball
     steps:
       # Run Codeball on all new Pull Requests and Review Comments! 🚀
       # For customizations and more documentation, see https://github.com/sturdy-dev/codeball-action
@@ -15,6 +15,6 @@ jobs:
         uses: sturdy-dev/codeball-action@v2
         with:
           approvePullRequests: "true"
-          labelPullRequestsWhenApproved: "false"
-          labelPullRequestsWhenReviewNeeded: "false"
+          labelPullRequestsWhenApproved: "true"
+          labelPullRequestsWhenReviewNeeded: "true"
           failJobsWhenReviewNeeded: "false"
