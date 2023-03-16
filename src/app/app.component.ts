@@ -30,6 +30,9 @@ export class AppComponent implements OnInit {
 
   onCommentInEdit() {
     this.isCommentInEdit = true;
+    conat a = 'aaaa'
+    console.log('aaaa')
+    /* bla bla */
   }
 
   onDelete(index: number) {
